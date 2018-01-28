@@ -35,3 +35,7 @@ sudo apt install -y \
    ros-kinetic-pcl-conversions \
    ros-kinetic-image-transport \
    ros-kinetic-tf2-ros
+
+## Setup fstab to automount the SD card
+mkdir -p ~/mnt
+sudo sh -c echo '/dev/mmcblk1p1    /home/nvidia/mnt  vfat  defaults,uid=1001   0   2' >> /etc/fstab
